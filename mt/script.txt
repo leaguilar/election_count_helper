@@ -1,0 +1,180 @@
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-iks7{background-color:#ffffff;border-color:#000000;text-align:left;vertical-align:top}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
+
+<!-- You must include this JavaScript file -->
+<script src="https://assets.crowd.aws/crowd-html-elements.js"></script>
+
+<!-- For the full list of available Crowd HTML Elements and their input/output documentation,
+      please refer to https://docs.aws.amazon.com/sagemaker/latest/dg/sms-ui-template-reference.html -->
+
+<!-- You must include crowd-form so that your task submits answers to MTurk -->
+<crowd-form answer-format="flatten-objects">
+    <full-instructions header="Bounding Box Instructions" >
+      There are many mistakes, i.e. people forgot to write the leading zeros, or wrote another charachter instead.
+      Other mistakes include crossing out data and writting it somehwere else.
+    </full-instructions>
+
+    <short-instructions>
+      Write the 3 digit numbers for every field
+    </short-instructions>
+    <p>
+      <strong>Instructions: </strong>
+      A form consisting of 2 columns with 3 digits entry each. Example values 000, 009, 400. Write the 3 digit values in their respective field
+    </p>
+    <p>
+      The people that filled these forms by hand made several mistakes, try to do your best guess regarding the position of the data
+    </p>
+
+    <!-- Your image file URLs will be substituted for the "image_url" variable below 
+          when you publish a batch with a CSV input file containing multiple image file URLs.
+          To preview the element with an example image, try setting the src attribute to
+          "https://s3.amazonaws.com/cv-demo-images/basketball-outdoor.jpg" -->
+
+<p>&nbsp;</p>
+<table class="tg">
+<tbody>
+<tr>
+<th class="tg-iks7" rowspan="21">
+DATA (Column A, Column B)
+<br>
+<!--<img src="${image_url}" style="max-width: 250px; max-height: 250px" />-->
+<img src="https://elecciones2019.s3.us-east-2.amazonaws.com/data_mturk_pres/000011.jpg" style="max-width: 250px; max-height: 250px" />
+
+</th>
+<th class="tg-iks7">&nbsp;</th>
+<th class="tg-iks7">Column A</th>
+<th class="tg-iks7">&nbsp;</th>
+<th class="tg-0lax">Column B</th>
+</tr>
+<tr>
+<td class="tg-iks7"></td>
+<td class="tg-iks7">A1<crowd-input label="XXX" max-length="3" name="tagA1" required allowed-pattern="[0-9]" ></crowd-input></td>
+<td class="tg-iks7"></td>
+<td class="tg-0lax">B1<crowd-input label="XXX" max-length="3" name="tagB2" required allowed-pattern="[0-9]"></crowd-input></td>
+</tr>
+<tr>
+<td class="tg-iks7">&nbsp;</td>
+<td class="tg-iks7">A2<crowd-input label="XXX" max-length="3" name="tagA2" required allowed-pattern="[0-9]"></td>
+<td class="tg-iks7">&nbsp;</td>
+<td class="tg-0lax">B1<crowd-input label="XXX" max-length="3" name="tagB2" required allowed-pattern="[0-9]"></td>
+</tr>
+<tr>
+<td class="tg-iks7">&nbsp;</td>
+<td class="tg-iks7">A3<crowd-input label="XXX" max-length="3" name="tagA3" required allowed-pattern="[0-9]"></td>
+<td class="tg-iks7">&nbsp;</td>
+<td class="tg-0lax">B3<crowd-input label="XXX" max-length="3" name="taB3" required allowed-pattern="[0-9]"></td>
+</tr>
+<tr>
+<td class="tg-iks7">&nbsp;</td>
+<td class="tg-iks7">A4<crowd-input label="XXX" max-length="3" name="tagA4" required allowed-pattern="[0-9]"></td>
+<td class="tg-iks7">&nbsp;</td>
+<td class="tg-0lax">B4<crowd-input label="XXX" max-length="3" name="tagB4" required allowed-pattern="[0-9]"></td>
+</tr>
+<tr>
+<td class="tg-iks7">&nbsp;</td>
+<td class="tg-iks7">A5<crowd-input label="XXX" max-length="3" name="tagA5" required allowed-pattern="[0-9]"></td>
+<td class="tg-iks7">&nbsp;</td>
+<td class="tg-0lax">B5<crowd-input label="XXX" max-length="3" name="tagB5" required allowed-pattern="[0-9]"></td>
+</tr>
+<tr>
+<td class="tg-0lax">&nbsp;</td>
+<td class="tg-0lax">A6<crowd-input label="XXX" max-length="3" name="tagA6" required allowed-pattern="[0-9]"></td>
+<td class="tg-0lax">&nbsp;</td>
+<td class="tg-0lax">B6<crowd-input label="XXX" max-length="3" name="tagB6" required allowed-pattern="[0-9]"></td>
+</tr>
+<tr>
+<td class="tg-0lax">&nbsp;</td>
+<td class="tg-0lax">A7<crowd-input label="XXX" max-length="3" name="tagA7" required allowed-pattern="[0-9]"></td>
+<td class="tg-0lax">&nbsp;</td>
+<td class="tg-0lax">&nbsp;</td>
+</tr>
+<tr>
+<td class="tg-0lax">&nbsp;</td>
+<td class="tg-0lax">A8<crowd-input label="XXX" max-length="3" name="tagA8" required allowed-pattern="[0-9]"></td>
+<td class="tg-0lax">&nbsp;</td>
+<td class="tg-0lax">&nbsp;</td>
+</tr>
+<tr>
+<td class="tg-0lax">&nbsp;</td>
+<td class="tg-0lax">A9<crowd-input label="XXX" max-length="3" name="tagA9" required allowed-pattern="[0-9]"></td>
+<td class="tg-0lax">&nbsp;</td>
+<td class="tg-0lax">&nbsp;</td>
+</tr>
+<tr>
+<td class="tg-0lax">&nbsp;</td>
+<td class="tg-0lax">A10<crowd-input label="XXX" max-length="3" name="tagA10" required allowed-pattern="[0-9]"></td>
+<td class="tg-0lax">&nbsp;</td>
+<td class="tg-0lax">&nbsp;</td>
+</tr>
+<tr>
+<td class="tg-0lax">&nbsp;</td>
+<td class="tg-0lax">A11<crowd-input label="XXX" max-length="3" name="tagA11" required allowed-pattern="[0-9]"></td>
+<td class="tg-0lax">&nbsp;</td>
+<td class="tg-0lax">&nbsp;</td>
+</tr>
+<tr>
+<td class="tg-0lax">&nbsp;</td>
+<td class="tg-0lax">A12<crowd-input label="XXX" max-length="3" name="tagA12" required allowed-pattern="[0-9]"></td>
+<td class="tg-0lax">&nbsp;</td>
+<td class="tg-0lax">&nbsp;</td>
+</tr>
+<tr>
+<td class="tg-0lax">&nbsp;</td>
+<td class="tg-0lax">A13<crowd-input label="XXX" max-length="3" name="tagA13" required allowed-pattern="[0-9]"></td>
+<td class="tg-0lax">&nbsp;</td>
+<td class="tg-0lax">&nbsp;</td>
+</tr>
+<tr>
+<td class="tg-0lax">&nbsp;</td>
+<td class="tg-0lax">A14<crowd-input label="XXX" max-length="3" name="tagA14" required allowed-pattern="[0-9]"></td>
+<td class="tg-0lax">&nbsp;</td>
+<td class="tg-0lax">&nbsp;</td>
+</tr>
+<tr>
+<td class="tg-0lax">&nbsp;</td>
+<td class="tg-0lax">A15<crowd-input label="XXX" max-length="3" name="tagA15" required allowed-pattern="[0-9]"></td>
+<td class="tg-0lax">&nbsp;</td>
+<td class="tg-0lax">&nbsp;</td>
+</tr>
+<tr>
+<td class="tg-0lax">&nbsp;</td>
+<td class="tg-0lax">A16<crowd-input label="XXX" max-length="3" name="tagA16" required allowed-pattern="[0-9]"></td>
+<td class="tg-0lax">&nbsp;</td>
+<td class="tg-0lax">&nbsp;</td>
+</tr>
+<tr>
+<td class="tg-0lax">&nbsp;</td>
+<td class="tg-0lax">A17<crowd-input label="XXX" max-length="3" name="tagA17" required allowed-pattern="[0-9]"></td>
+<td class="tg-0lax">&nbsp;</td>
+<td class="tg-0lax">&nbsp;</td>
+</tr>
+<tr>
+<td class="tg-0lax">&nbsp;</td>
+<td class="tg-0lax">A18<crowd-input label="XXX" max-length="3" name="tagA18" required allowed-pattern="[0-9]"></td>
+<td class="tg-0lax">&nbsp;</td>
+<td class="tg-0lax">&nbsp;</td>
+</tr>
+<tr>
+<td class="tg-0lax">&nbsp;</td>
+<td class="tg-0lax">A19<crowd-input label="XXX" max-length="3" name="tagA19" required allowed-pattern="[0-9]"></td>
+<td class="tg-0lax">&nbsp;</td>
+<td class="tg-0lax">&nbsp;</td>
+</tr>
+<tr>
+<td class="tg-0lax">&nbsp;</td>
+<td class="tg-0lax">&nbsp;</td>
+<td class="tg-0lax">&nbsp;</td>
+<td class="tg-0lax"><crowd-checkbox name="IsDifficult" value="difficult"> Had problems? &nbsp;</td>
+</tr>
+</tbody>
+</table>
+    
+
+    
+
+</crowd-form>
