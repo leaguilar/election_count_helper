@@ -1,0 +1,124 @@
+.tg  {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+.tg td{
+    padding:10px 5px;
+    border-style:solid;
+    border-width:1px;
+    overflow:hidden;
+    word-break:normal;
+    /* border-color:rgb(189, 187, 187) !important; */
+    border: none !important;
+}
+
+.tg tr:nth-child(1) th{
+    border: none;
+    font-weight: bold;
+}
+
+.tg tr:nth-child(1) th span{
+    display: flex;
+    justify-content: center;
+    color: #0073bb;
+}
+
+.tg th{
+    font-weight:normal;
+    padding:10px 5px;
+    border-style:solid;
+    border-width:1px;
+    overflow:hidden;
+    word-break:normal;
+}
+
+.tg .tg-iks7{
+    border-color:#000000;
+    text-align:left;
+    vertical-align:top;
+}
+
+.tg .tg-iks7:nth-child(odd){
+    background: none;
+    border: none;
+}
+
+.tg .tg-0lax:nth-child(odd){
+    background: none;
+    border: none;
+}
+
+.tg td:nth-child(even){
+    /* background: white; */
+    padding-top: 0 !important;
+}
+
+.tg .tg-iks7.image-container{
+    position: absolute;
+}
+
+.tg .tg-0lax{
+    text-align:left;
+    vertical-align:top
+}
+
+.tg td .input-container{
+    background: white;
+    padding: 6px;
+    border: 1px solid rgb(202, 202, 202);
+}
+
+.tg td .input-container .title{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* .floated-label-placeholder{
+    display: var(--isdisplayed, none) !important;
+} */
+
+.form-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.form-container .table-container{
+    min-width: 350px;
+}
+
+.form-container .instructions-container{
+    margin: 18px 0 0 12px;
+    position: relative;
+    display: flex;
+    width: 100%;
+}
+
+.form-container .instructions-container .inner-instructions-container{
+    margin: 0 60px 0 0;
+    position: fixed;
+}
+
+.form-container .image-container{
+    display: flex;
+    min-width: 350px;
+}
+
+.form-container .image-container .inner-image-container{
+    position: fixed;
+    display: flex;
+    padding: 3px;
+    flex-direction: column;
+    /* background: white; */
+}
+
+.form-container .image-container .inner-image-container .title{
+    font-weight: bold;
+    margin: 7px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.awsui-button.awsui-button-variant-primary.awsui-hover-child-icons{
+    background-color: red !important;
+}
