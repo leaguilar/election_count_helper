@@ -39,17 +39,17 @@
     vertical-align:top;
 }
 
-.tg .tg-iks7:nth-child(odd){
+.tg .tg-iks7{
     background: none;
     border: none;
 }
 
-.tg .tg-0lax:nth-child(odd){
+.tg .tg-0lax{
     background: none;
     border: none;
 }
 
-.tg td:nth-child(even){
+.tg td{
     /* background: white; */
     padding-top: 0 !important;
 }
@@ -84,7 +84,10 @@
 }
 
 .form-container .table-container{
-    min-width: 350px;
+    margin-left: 12px;
+    display: flex;
+    justify-content: center;
+    min-width: 200px;
 }
 
 .form-container .instructions-container{
@@ -101,7 +104,7 @@
 
 .form-container .image-container{
     display: flex;
-    min-width: 350px;
+    min-width: 400px;
 }
 
 .form-container .image-container .inner-image-container{
