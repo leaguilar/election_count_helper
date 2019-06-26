@@ -8,13 +8,26 @@
 
 <!-- You must include crowd-form so that your task submits answers to MTurk -->
 <crowd-form answer-format="flatten-objects">
-    <full-instructions header="Bounding Box Instructions" >
-        There are many mistakes, i.e. people forgot to write the leading zeros, or wrote another charachter instead.
-        Other mistakes include crossing out data and writting it somehwere else.
+    <full-instructions header="3-digit Form" >
+    <ul>
+        <li>We are interested in obtaining the handwritten <b>3-digit numbers</b> of a form. In the upper left corner in blue we provide the number of rows for column A. We also provide <b>approximate</b> guidelines marking possible rows in the form. </li>
+        
+        <li>There are many mistakes, i.e. people forgot to write the leading zeros, or wrote another character instead.</li>
+        <li>Other mistakes include crossing out data and writing it somewhere else.</li>
+        
+        <li>Every additional row should be filled with zeros (000).</li>
+        
+        <li>If you found some numbers impossible to determine, mark the "I'm not sure" box (optionally)</li>
+     </ul>   
+        Thank you for your effort!
     </full-instructions>
 
     <short-instructions>
-        Write the 3 digit numbers for every field
+        <ul>
+            <li>Write the <b>3-digit</b> numbers for every field.</li>
+            <li>Use <b>TAB</b> to move from a row to the next.</li>
+            <li>Fill with zeros (000) every <b>additional field</b>.</li>
+        </ul>  
     </short-instructions>
 
     <!-- Your image file URLs will be substituted for the "image_url" variable below 
@@ -26,7 +39,7 @@
     <span class="image-container">
         <span class="inner-image-container">
             <span class="title">
-                DATA (Column A, Column B)
+                DATA
             </span>
             <!--<img src="${image_url}" style="max-width: 250px; max-height: 250px" />-->
             <img src="https://elecciones2019.s3.us-east-2.amazonaws.com/data_mturk_pres/000011.jpg" style="width: 400px;" />
@@ -96,22 +109,22 @@
         <td class="tg-0lax"><div class="input-container"><span class="title">A19</span><crowd-input label="XXX" max-length="3" name="tagA19" required allowed-pattern="[0-9]"></crowd-input></div></td>
         </tr>
         <tr>
-        <td class="tg-0lax"><div class="input-container"><span class="title">A20</span><crowd-input label="XXX" max-length="3" name="tagA19" required allowed-pattern="[0-9]"></crowd-input></div></td>
+        <td class="tg-0lax"><div class="input-container"><span class="title">A20</span><crowd-input label="XXX" max-length="3" name="tagA20" required allowed-pattern="[0-9]"></crowd-input></div></td>
         </tr>
         <tr>
-        <td class="tg-0lax"><div class="input-container"><span class="title">A21</span><crowd-input label="XXX" max-length="3" name="tagA19" required allowed-pattern="[0-9]"></crowd-input></div></td>
+        <td class="tg-0lax"><div class="input-container"><span class="title">A21</span><crowd-input label="XXX" max-length="3" name="tagA21" required allowed-pattern="[0-9]"></crowd-input></div></td>
         </tr>
         <tr>
-        <td class="tg-0lax"><div class="input-container"><span class="title">A22</span><crowd-input label="XXX" max-length="3" name="tagA19" required allowed-pattern="[0-9]"></crowd-input></div></td>
+        <td class="tg-0lax"><div class="input-container"><span class="title">A22</span><crowd-input label="XXX" max-length="3" name="tagA22" required allowed-pattern="[0-9]"></crowd-input></div></td>
         </tr>
         <tr>
-        <td class="tg-0lax"><div class="input-container"><span class="title">A23</span><crowd-input label="XXX" max-length="3" name="tagA19" required allowed-pattern="[0-9]"></crowd-input></div></td>
+        <td class="tg-0lax"><div class="input-container"><span class="title">A23</span><crowd-input label="XXX" max-length="3" name="tagA23" required allowed-pattern="[0-9]"></crowd-input></div></td>
         </tr>
         <tr>
-        <td class="tg-0lax"><div class="input-container"><span class="title">A24</span><crowd-input label="XXX" max-length="3" name="tagA19" required allowed-pattern="[0-9]"></crowd-input></div></td>
+        <td class="tg-0lax"><div class="input-container"><span class="title">A24</span><crowd-input label="XXX" max-length="3" name="tagA24" required allowed-pattern="[0-9]"></crowd-input></div></td>
         </tr>
         <tr>
-        <td class="tg-0lax"><div class="input-container"><span class="title">A25</span><crowd-input label="XXX" max-length="3" name="tagA19" required allowed-pattern="[0-9]"></crowd-input></div></td>
+        <td class="tg-0lax"><div class="input-container"><span class="title">A25</span><crowd-input label="XXX" max-length="3" name="tagA25" required allowed-pattern="[0-9]"></crowd-input></div></td>
         </tr>
         </tbody>
         </table>
@@ -120,13 +133,19 @@
         <span class="inner-instructions-container">
             <p>
                 <strong>Instructions: </strong>
-                A form consisting of 2 columns with 3 digits entry each. Example values 000, 009, 400. Write the 3 digit values in their respective field
-            </p>
-            <p>
-                The people that filled these forms by hand made several mistakes, try to do your best guess regarding the position of the data
+                <br>
+                <br>
+                <br>
+                A form consisting 3 handwritten digits per row needs to be recognized by smart humans. 
+                <br>
+                <br>
+                Example values 100, 009, 400. 
+                <br>
+                <br>
+                The people that filled these forms by hand made several mistakes, try to do your best guess regarding the position of the data. 
             </p>
 
-            <crowd-checkbox name="IsDifficult" value="difficult"> Had problems? </crowd-checkbox>
+            <crowd-checkbox name="IsDifficult" value="difficult"> I'm not sure </crowd-checkbox>
         </span>
     </span>
 </span>
