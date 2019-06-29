@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="https://elecciones2019.s3.us-east-2.amazonaws.com/style.css" media="screen" />
 
 <!-- You must include this JavaScript file -->
 <script src="https://assets.crowd.aws/crowd-html-elements.js"></script>
@@ -39,10 +39,12 @@
     <span class="image-container">
         <span class="inner-image-container">
             <span class="title">
-                DATA
             </span>
-            <!--<img src="${image_url}" style="max-width: 250px; max-height: 250px" />-->
-            <img src="https://elecciones2019.s3.us-east-2.amazonaws.com/data_mturk_pres/000011.jpg" style="width: 400px;" />
+            <!--<img src= style="max-width: 250px; max-height: 250px" />-->
+            <!--${ID}-->
+            <!--"${sha256}" -->
+            <img src="https://elecciones2019.s3.us-east-2.amazonaws.com/data_mturk/${imgName}" style="height: 440px; max-width: 300" />
+            <!--<img src="https://elecciones2019.s3.us-east-2.amazonaws.com/data_mturk_pres/${imgName}" style="width: 400px; max-height: 100%" />-->
         </span>
     </span>
     <span class="table-container">
@@ -124,7 +126,7 @@
         <td class="tg-0lax"><div class="input-container"><span class="title">A24</span><crowd-input label="XXX" max-length="3" name="tagA24" required allowed-pattern="[0-9]"></crowd-input></div></td>
         </tr>
         <tr>
-        <td class="tg-0lax"><div class="input-container"><span class="title">A25</span><crowd-input label="XXX" max-length="3" name="tagA25" required allowed-pattern="[0-9]"></crowd-input></div></td>
+        <td class="tg-0lax"><!-- <div class="input-container"><span class="title">A25</span><crowd-input label="XXX" max-length="3" name="tagA25" required allowed-pattern="[0-9]"></crowd-input></div> --> </td>
         </tr>
         </tbody>
         </table>
