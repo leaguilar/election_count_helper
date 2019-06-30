@@ -129,6 +129,7 @@
 
 .form-container .image-container .inner-image-container img{
     width: 400px !important;
+	max-height: calc(100vh - 50px);
 }
 
 .img-zoom-result {
@@ -136,7 +137,7 @@
     border: 1px solid #d4d4d4;
     /*set the size of the result div:*/
     width: 300px;
-    height: 300px;
+    height: 150px;
     position: relative;
 }
 
@@ -170,5 +171,5 @@
     border: 2px solid #d4d4d4;
     /*set the size of the lens:*/
     width: 150px;
-    height: 150px;
+    height: 75px;
 }

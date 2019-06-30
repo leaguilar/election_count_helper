@@ -3,7 +3,7 @@
 
 <!-- You must include this JavaScript file -->
 <script src="https://assets.crowd.aws/crowd-html-elements.js"></script>
-<script src="image-control.js"></script>
+<script src="https://elecciones2019.s3.us-east-2.amazonaws.com/image-control.js"></script>
 
 <!-- For the full list of available Crowd HTML Elements and their input/output documentation,
         please refer to https://docs.aws.amazon.com/sagemaker/latest/dg/sms-ui-template-reference.html -->
@@ -28,7 +28,11 @@
         <ul>
             <li>Write the <b>3-digit</b> numbers for every field.</li>
             <li>Use <b>TAB</b> to move from a row to the next.</li>
-            <li>Fill with zeros (000) every <b>additional field</b>.</li>
+			<li>Example values: <b>100, 009, 400, 073</b></li> 
+            <li>Make your best guess regarding the value and position of the data.</li> 
+			<li>Fill with zeros (000) every <b>additional field</b>.</li>
+			<li>Arrow keys and Mouse move the zoom area</li>
+
         </ul>  
     </short-instructions>
 
@@ -44,7 +48,7 @@
             <!--${ID}-->
             <!--"${sha256}" -->
             <img id="image" src="https://elecciones2019.s3.us-east-2.amazonaws.com/data_mturk/${imgName}"/>
-            <!-- <img id="image" src="https://elecciones2019.s3.us-east-2.amazonaws.com/data_mturk/000011.jpg"/> -->
+            <!--<img id="image" src="https://elecciones2019.s3.us-east-2.amazonaws.com/data_mturk/000011.jpg"/> ->
             <!--<img src="https://elecciones2019.s3.us-east-2.amazonaws.com/data_mturk_pres/${imgName}" style="width: 400px; max-height: 100%" />-->
         </span>
     </span>
@@ -52,76 +56,76 @@
         <table class="tg">
         <tbody>
         <tr>
-        <td class="tg-iks7"><div class="input-container"><span class="title">A1</span><crowd-input label="XXX" max-length="3" name="tagA01" required allowed-pattern="[0-9]"></crowd-input></div></td>
+        <td class="tg-iks7"><div class="input-container"><crowd-input label="A1" min-length="3" max-length="3" name="tagA01" required allowed-pattern="[0-9]" auto-focus="true" error-message="3 digits needed" ></crowd-input></div></td>
         </tr>
         <tr>
-        <td class="tg-iks7"><div class="input-container"><span class="title">A2</span><crowd-input label="XXX" max-length="3" name="tagA02" required allowed-pattern="[0-9]"></crowd-input></div></td>
+        <td class="tg-iks7"><div class="input-container"><crowd-input label="A2" min-length="3" max-length="3" name="tagA02" required allowed-pattern="[0-9]" error-message="3 digits needed"></crowd-input></div></td>
         </tr>
         <tr>
-        <td class="tg-iks7"><div class="input-container"><span class="title">A3</span><crowd-input label="XXX" max-length="3" name="tagA03" required allowed-pattern="[0-9]"></crowd-input></div></td>
+        <td class="tg-iks7"><div class="input-container"><crowd-input label="A3" min-length="3" max-length="3" name="tagA03" required allowed-pattern="[0-9]" error-message="3 digits needed"></crowd-input></div></td>
         </tr>
         <tr>
-        <td class="tg-iks7"><div class="input-container"><span class="title">A4</span><crowd-input label="XXX" max-length="3" name="tagA04" required allowed-pattern="[0-9]"></crowd-input></div></td>
+        <td class="tg-iks7"><div class="input-container"><crowd-input label="A4" min-length="3" max-length="3" name="tagA04" required allowed-pattern="[0-9]" error-message="3 digits needed"></crowd-input></div></td>
         </tr>
         <tr>
-        <td class="tg-iks7"><div class="input-container"><span class="title">A5</span><crowd-input label="XXX" max-length="3" name="tagA05" required allowed-pattern="[0-9]"></crowd-input></div></td>
+        <td class="tg-iks7"><div class="input-container"><crowd-input label="A5" min-length="3" max-length="3" name="tagA05" required allowed-pattern="[0-9]" error-message="3 digits needed"></crowd-input></div></td>
         </tr>
         <tr>
-        <td class="tg-0lax"><div class="input-container"><span class="title">A6</span><crowd-input label="XXX" max-length="3" name="tagA06" required allowed-pattern="[0-9]"></crowd-input></div></td>
+        <td class="tg-0lax"><div class="input-container"><crowd-input label="A6" min-length="3" max-length="3" name="tagA06" required allowed-pattern="[0-9]" error-message="3 digits needed"></crowd-input></div></td>
         </tr>
         <tr>
-        <td class="tg-0lax"><div class="input-container"><span class="title">A7</span><crowd-input label="XXX" max-length="3" name="tagA07" required allowed-pattern="[0-9]"></crowd-input></div></td>
+        <td class="tg-0lax"><div class="input-container"><crowd-input label="A7" min-length="3" max-length="3" name="tagA07" required allowed-pattern="[0-9]" error-message="3 digits needed"></crowd-input></div></td>
         </tr>
         <tr>
-        <td class="tg-0lax"><div class="input-container"><span class="title">A8</span><crowd-input label="XXX" max-length="3" name="tagA08" required allowed-pattern="[0-9]"></crowd-input></div></td>
+        <td class="tg-0lax"><div class="input-container"><crowd-input label="A8" min-length="3" max-length="3" name="tagA08" required allowed-pattern="[0-9]" error-message="3 digits needed"></crowd-input></div></td>
         </tr>
         <tr>
-        <td class="tg-0lax"><div class="input-container"><span class="title">A9</span><crowd-input label="XXX" max-length="3" name="tagA09" required allowed-pattern="[0-9]"></crowd-input></div></td>
+        <td class="tg-0lax"><div class="input-container"><crowd-input label="A9" min-length="3" max-length="3" name="tagA09" required allowed-pattern="[0-9]" error-message="3 digits needed"></crowd-input></div></td>
         </tr>
         <tr>
-        <td class="tg-0lax"><div class="input-container"><span class="title">A10</span><crowd-input label="XXX" max-length="3" name="tagA10" required allowed-pattern="[0-9]"></crowd-input></div></td>
+        <td class="tg-0lax"><div class="input-container"><crowd-input label="A10" min-length="3" max-length="3" name="tagA10" required allowed-pattern="[0-9]" error-message="3 digits needed"></crowd-input></div></td>
         </tr>
         <tr>
-        <td class="tg-0lax"><div class="input-container"><span class="title">A11</span><crowd-input label="XXX" max-length="3" name="tagA11" required allowed-pattern="[0-9]"></crowd-input></div></td>
+        <td class="tg-0lax"><div class="input-container"><crowd-input label="A11" min-length="3" max-length="3" name="tagA11" required allowed-pattern="[0-9]" error-message="3 digits needed"></crowd-input></div></td>
         </tr>
         <tr>
-        <td class="tg-0lax"><div class="input-container"><span class="title">A12</span><crowd-input label="XXX" max-length="3" name="tagA12" required allowed-pattern="[0-9]"></crowd-input></div></td>
+        <td class="tg-0lax"><div class="input-container"><crowd-input label="A12" min-length="3" max-length="3" name="tagA12" required allowed-pattern="[0-9]" error-message="3 digits needed"></crowd-input></div></td>
         </tr>
         <tr>
-        <td class="tg-0lax"><div class="input-container"><span class="title">A13</span><crowd-input label="XXX" max-length="3" name="tagA13" required allowed-pattern="[0-9]"></crowd-input></div></td>
+        <td class="tg-0lax"><div class="input-container"><crowd-input label="A13" min-length="3" max-length="3" name="tagA13" required allowed-pattern="[0-9]" error-message="3 digits needed"></crowd-input></div></td>
         </tr>
         <tr>
-        <td class="tg-0lax"><div class="input-container"><span class="title">A14</span><crowd-input label="XXX" max-length="3" name="tagA14" required allowed-pattern="[0-9]"></crowd-input></div></td>
+        <td class="tg-0lax"><div class="input-container"><crowd-input label="A14" min-length="3" max-length="3" name="tagA14" required allowed-pattern="[0-9]" error-message="3 digits needed"></crowd-input></div></td>
         </tr>
         <tr>
-        <td class="tg-0lax"><div class="input-container"><span class="title">A15</span><crowd-input label="XXX" max-length="3" name="tagA15" required allowed-pattern="[0-9]"></crowd-input></div></td>
+        <td class="tg-0lax"><div class="input-container"><crowd-input label="A15" min-length="3" max-length="3" name="tagA15" required allowed-pattern="[0-9]" error-message="3 digits needed"></crowd-input></div></td>
         </tr>
         <tr>
-        <td class="tg-0lax"><div class="input-container"><span class="title">A16</span><crowd-input label="XXX" max-length="3" name="tagA16" required allowed-pattern="[0-9]"></crowd-input></div></td>
+        <td class="tg-0lax"><div class="input-container"><crowd-input label="A16" min-length="3" max-length="3" name="tagA16" required allowed-pattern="[0-9]" error-message="3 digits needed"></crowd-input></div></td>
         </tr>
         <tr>
-        <td class="tg-0lax"><div class="input-container"><span class="title">A17</span><crowd-input label="XXX" max-length="3" name="tagA17" required allowed-pattern="[0-9]"></crowd-input></div></td>
+        <td class="tg-0lax"><div class="input-container"><crowd-input label="A17" min-length="3" max-length="3" name="tagA17" required allowed-pattern="[0-9]" error-message="3 digits needed"></crowd-input></div></td>
         </tr>
         <tr>
-        <td class="tg-0lax"><div class="input-container"><span class="title">A18</span><crowd-input label="XXX" max-length="3" name="tagA18" required allowed-pattern="[0-9]"></crowd-input></div></td>
+        <td class="tg-0lax"><div class="input-container"><crowd-input label="A18" min-length="3" max-length="3" name="tagA18" required allowed-pattern="[0-9]" error-message="3 digits needed"></crowd-input></div></td>
         </tr>
         <tr>
-        <td class="tg-0lax"><div class="input-container"><span class="title">A19</span><crowd-input label="XXX" max-length="3" name="tagA19" required allowed-pattern="[0-9]"></crowd-input></div></td>
+        <td class="tg-0lax"><div class="input-container"><crowd-input label="A19" min-length="3" max-length="3" name="tagA19" required allowed-pattern="[0-9]" error-message="3 digits needed"></crowd-input></div></td>
         </tr>
         <tr>
-        <td class="tg-0lax"><div class="input-container"><span class="title">A20</span><crowd-input label="XXX" max-length="3" name="tagA20" required allowed-pattern="[0-9]"></crowd-input></div></td>
+        <td class="tg-0lax"><div class="input-container"><crowd-input label="A20" min-length="3" max-length="3" name="tagA20" required allowed-pattern="[0-9]" error-message="3 digits needed"></crowd-input></div></td>
         </tr>
         <tr>
-        <td class="tg-0lax"><div class="input-container"><span class="title">A21</span><crowd-input label="XXX" max-length="3" name="tagA21" required allowed-pattern="[0-9]"></crowd-input></div></td>
+        <td class="tg-0lax"><div class="input-container"><crowd-input label="A21" min-length="3" max-length="3" name="tagA21" required allowed-pattern="[0-9]" error-message="3 digits needed"></crowd-input></div></td>
         </tr>
         <tr>
-        <td class="tg-0lax"><div class="input-container"><span class="title">A22</span><crowd-input label="XXX" max-length="3" name="tagA22" required allowed-pattern="[0-9]"></crowd-input></div></td>
+        <td class="tg-0lax"><div class="input-container"><crowd-input label="A22" min-length="3" max-length="3" name="tagA22" required allowed-pattern="[0-9]" error-message="3 digits needed"></crowd-input></div></td>
         </tr>
         <tr>
-        <td class="tg-0lax"><div class="input-container"><span class="title">A23</span><crowd-input label="XXX" max-length="3" name="tagA23" required allowed-pattern="[0-9]"></crowd-input></div></td>
+        <td class="tg-0lax"><div class="input-container"><crowd-input label="A23" min-length="3" max-length="3" name="tagA23" required allowed-pattern="[0-9]" error-message="3 digits needed"></crowd-input></div></td>
         </tr>
         <tr>
-        <td class="tg-0lax"><div class="input-container"><span class="title">A24</span><crowd-input label="XXX" max-length="3" name="tagA24" required allowed-pattern="[0-9]"></crowd-input></div></td>
+        <td class="tg-0lax"><div class="input-container"><crowd-input label="A24" min-length="3" max-length="3" name="tagA24" required allowed-pattern="[0-9]" error-message="3 digits needed"></crowd-input></div></td>
         </tr>
         <tr>
         <td class="tg-0lax"><!-- <div class="input-container"><span class="title">A25</span><crowd-input label="XXX" max-length="3" name="tagA25" required allowed-pattern="[0-9]"></crowd-input></div> --> </td>
@@ -134,19 +138,12 @@
             <p>
                 <strong>Instructions: </strong>
                 <br>
-                <br>
-                <br>
                 A form consisting 3 handwritten digits per row needs to be recognized by smart humans. 
-                <br>
-                <br>
-                Example values 100, 009, 400. 
-                <br>
-                <br>
-                The people that filled these forms by hand made several mistakes, try to do your best guess regarding the position of the data. 
+
             </p>
 
-            <crowd-checkbox name="IsDifficult" value="difficult"> I'm not sure </crowd-checkbox>
-
+            <crowd-checkbox name="IsDifficult" value="difficult"> I'm not sure / unreadable </crowd-checkbox>
+			<br>
             <div id="myresult" class="img-zoom-result default">
                 <span class="info-text-container">
                     <span class="info-text">
