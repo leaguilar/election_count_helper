@@ -1,7 +1,9 @@
 <link rel="stylesheet" type="text/css" href="https://elecciones2019.s3.us-east-2.amazonaws.com/style.css" media="screen" />
+<!-- <link rel="stylesheet" type="text/css" href="style.css" media="screen" /> -->
 
 <!-- You must include this JavaScript file -->
 <script src="https://assets.crowd.aws/crowd-html-elements.js"></script>
+<script src="image-control.js"></script>
 
 <!-- For the full list of available Crowd HTML Elements and their input/output documentation,
         please refer to https://docs.aws.amazon.com/sagemaker/latest/dg/sms-ui-template-reference.html -->
@@ -39,11 +41,13 @@
     <span class="image-container">
         <span class="inner-image-container">
             <span class="title">
+                Image
             </span>
             <!--<img src= style="max-width: 250px; max-height: 250px" />-->
             <!--${ID}-->
             <!--"${sha256}" -->
-            <img src="https://elecciones2019.s3.us-east-2.amazonaws.com/data_mturk/${imgName}" style="height: 440px; max-width: 300" />
+            <img id="image" src="https://elecciones2019.s3.us-east-2.amazonaws.com/data_mturk/${imgName}"/>
+            <!-- <img id="image" src="https://elecciones2019.s3.us-east-2.amazonaws.com/data_mturk/000011.jpg"/> -->
             <!--<img src="https://elecciones2019.s3.us-east-2.amazonaws.com/data_mturk_pres/${imgName}" style="width: 400px; max-height: 100%" />-->
         </span>
     </span>
@@ -154,11 +158,3 @@
 
 
 </crowd-form>
-
-<!-- <script>
-    document.onreadystatechange = () => {
-        if (document.readyState === 'complete') {
-            console.log(document.getElementsByClassName('awsui-button-no-text'));
-        }
-    };
-</script> -->
