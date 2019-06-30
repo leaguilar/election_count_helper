@@ -91,7 +91,7 @@
 }
 
 .form-container .instructions-container{
-    margin: 18px 0 0 12px;
+    margin: 20px 0 0 12px;
     position: relative;
     display: flex;
     width: 100%;
@@ -119,7 +119,11 @@
     font-weight: bold;
     margin: 7px 0;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+}
+
+.form-container .image-container .inner-image-container img{
+    width: 400px !important;
 }
 
 .awsui-button.awsui-button-variant-primary.awsui-hover-child-icons{
