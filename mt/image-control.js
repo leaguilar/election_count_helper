@@ -15,13 +15,15 @@ window.addEventListener("resize", () => {
 		
 	/*document.getElementById('image').setAttribute('style', `max-height: calc(100vh - 50px);`);*/
 	/*removeFooter()*/
-	removeFooter();
+	/*removeFooter();*/
 	/*removeExtraSpace();*/
+	/*document.querySelector("body > crowd-form").shadowRoot.querySelector("#actionsContainer > awsui-button > button").addEventListener("click", askCheck);*/
 });
 
 window.addEventListener("focusin", () => {
 	removeFooter();
 	removeExtraSpace();
+	document.querySelector("body > crowd-form").shadowRoot.querySelector("#actionsContainer > awsui-button > button").addEventListener("click", askCheck);
 });
 
 function removeFooter(){
@@ -36,6 +38,25 @@ function removeExtraSpace(){
 	for (var i = 0; i < all_inputs.length; i++) { 
 		all_inputs[i].shadowRoot.querySelector("#container").shadowRoot.querySelector("div.floated-label-placeholder").hidden=true
 	}	
+}
+
+function askCheck(){
+	setTimeout(showText, 3000);
+	setTimeout(removeText, 9000);
+}
+
+function showText(){
+	var x = document.getElementsByClassName("warning");
+	for (i = 0; i < x.length; i++) {
+	  x[0].innerText='If it takes too long, check for missing input'
+	}
+}
+
+function removeText(){
+	var x = document.getElementsByClassName("warning");
+	for (i = 0; i < x.length; i++) {
+	  x[0].innerText=''
+	}
 }
 
 

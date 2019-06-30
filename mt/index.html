@@ -1,5 +1,5 @@
 <link rel="stylesheet" type="text/css" href="https://elecciones2019.s3.us-east-2.amazonaws.com/style.css" media="screen" />
-<!-- <link rel="stylesheet" type="text/css" href="style.css" media="screen" /> -->
+<!-- https://elecciones2019.s3.us-east-2.amazonaws.com/ -->
 
 <!-- You must include this JavaScript file -->
 <script src="https://assets.crowd.aws/crowd-html-elements.js"></script>
@@ -32,6 +32,7 @@
             <li>Make your best guess regarding the value and position of the data.</li> 
 			<li>Fill with zeros (000) every <b>additional field</b>.</li>
 			<li>Arrow keys and Mouse move the zoom area</li>
+			<li>If submission button doesn't work check for errors in your input</li>
 
         </ul>  
     </short-instructions>
@@ -47,8 +48,8 @@
             <!--<img src= style="max-width: 250px; max-height: 250px" />-->
             <!--${ID}-->
             <!--"${sha256}" -->
-            <img id="image" src="https://elecciones2019.s3.us-east-2.amazonaws.com/data_mturk/${imgName}"/>
-            <!--<img id="image" src="https://elecciones2019.s3.us-east-2.amazonaws.com/data_mturk/000011.jpg"/> ->
+            <img id="image" src="https://elecciones2019.s3.us-east-2.amazonaws.com/data_mturk/${imgName}"/> 
+            <!--<img id="image" src="https://elecciones2019.s3.us-east-2.amazonaws.com/data_mturk/000011.jpg"/> -->
             <!--<img src="https://elecciones2019.s3.us-east-2.amazonaws.com/data_mturk_pres/${imgName}" style="width: 400px; max-height: 100%" />-->
         </span>
     </span>
@@ -139,7 +140,7 @@
                 <strong>Instructions: </strong>
                 <br>
                 A form consisting 3 handwritten digits per row needs to be recognized by smart humans. 
-
+				<span class="warning">&nbsp</span>
             </p>
 
             <crowd-checkbox name="IsDifficult" value="difficult"> I'm not sure / unreadable </crowd-checkbox>

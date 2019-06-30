@@ -74,6 +74,13 @@
     font-weight: bold;
 }
 
+.warning{
+    font-size: 20px;
+    font-weight: bold;
+	color: red;
+}
+
+
 /* .floated-label-placeholder{
     display: var(--isdisplayed, none) !important;
 } */
