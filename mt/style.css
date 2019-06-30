@@ -91,7 +91,7 @@
 }
 
 .form-container .instructions-container{
-    margin: 20px 0 0 12px;
+    margin: 0 0 0 12px;
     position: relative;
     display: flex;
     width: 100%;
@@ -102,6 +102,12 @@
     position: fixed;
 }
 
+.form-container .instructions-container .inner-instructions-container p{
+    margin: 0;
+    margin-bottom: 24px;
+    width: 300px;
+}
+
 .form-container .image-container{
     display: flex;
     min-width: 400px;
@@ -110,7 +116,6 @@
 .form-container .image-container .inner-image-container{
     position: fixed;
     display: flex;
-    padding: 3px;
     flex-direction: column;
     /* background: white; */
 }
@@ -126,6 +131,44 @@
     width: 400px !important;
 }
 
-.awsui-button.awsui-button-variant-primary.awsui-hover-child-icons{
-    background-color: red !important;
+.img-zoom-result {
+    margin-top: 24px;
+    border: 1px solid #d4d4d4;
+    /*set the size of the result div:*/
+    width: 300px;
+    height: 300px;
+    position: relative;
+}
+
+.img-zoom-result .info-text-container{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    color: white;
+    background: rgba(0, 0, 0, 0.85);
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease;
+}
+
+.img-zoom-result.default .info-text-container{
+    opacity: 1;
+}
+
+.img-zoom-result .info-text-container .info-text{
+    display: flex;
+    margin: 0 40px;
+    text-align: center;
+}
+
+.img-zoom-lens {
+    position: absolute;
+    border: 2px solid #d4d4d4;
+    /*set the size of the lens:*/
+    width: 150px;
+    height: 150px;
 }

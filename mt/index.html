@@ -40,9 +40,6 @@
 <span class="form-container">
     <span class="image-container">
         <span class="inner-image-container">
-            <span class="title">
-                Image
-            </span>
             <!--<img src= style="max-width: 250px; max-height: 250px" />-->
             <!--${ID}-->
             <!--"${sha256}" -->
@@ -54,9 +51,6 @@
     <span class="table-container">
         <table class="tg">
         <tbody>
-        <tr>
-        <th class="tg-iks7"><span>Column A</span></th>
-        </tr>
         <tr>
         <td class="tg-iks7"><div class="input-container"><span class="title">A1</span><crowd-input label="XXX" max-length="3" name="tagA01" required allowed-pattern="[0-9]"></crowd-input></div></td>
         </tr>
@@ -152,6 +146,14 @@
             </p>
 
             <crowd-checkbox name="IsDifficult" value="difficult"> I'm not sure </crowd-checkbox>
+
+            <div id="myresult" class="img-zoom-result default">
+                <span class="info-text-container">
+                    <span class="info-text">
+                        Move the cursor over the image to zoom
+                    </span>
+                </span>
+            </div>
         </span>
     </span>
 </span>
