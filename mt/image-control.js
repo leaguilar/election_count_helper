@@ -1,4 +1,5 @@
 var firstWatch = true;
+var firstFocusIn = true;
 
 document.onreadystatechange = () => {
     if (document.readyState === 'complete') {
@@ -7,11 +8,14 @@ document.onreadystatechange = () => {
 };
 
 window.addEventListener("focusin", () => {
-    setTimeout(()=>{
-        removeFooter();
-        removeExtraSpace();
-    }, 1000);
-	document.querySelector("body > crowd-form").shadowRoot.querySelector("#actionsContainer > awsui-button > button").addEventListener("click", askCheck);
+    if(firstFocusIn){
+        firstFocusIn = false;
+        setTimeout(() => {
+            removeFooter();
+            removeExtraSpace();
+        }, 1000);
+        document.querySelector("body > crowd-form").shadowRoot.querySelector("#actionsContainer > awsui-button > button").addEventListener("click", askCheck);
+    }
 });
 
 function removeFooter(){
