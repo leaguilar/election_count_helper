@@ -10,15 +10,18 @@ window.addEventListener("focusin", () => {
     setTimeout(()=>{
         removeFooter();
         removeExtraSpace();
-    }, 3000);
+    }, 1000);
 	document.querySelector("body > crowd-form").shadowRoot.querySelector("#actionsContainer > awsui-button > button").addEventListener("click", askCheck);
 });
 
 function removeFooter(){
-	var content=document.querySelector("body > crowd-form").shadowRoot.querySelector("#footerContainer > style").innerHTML;
-	content=content.replace('background-color: white','background-color: rgba(0,28,36,0.0)');
-	content=content.replace('border-top: 1px solid rgba(0,28,36,.25);','border-top: 1px solid rgba(0,28,36,0.0);');
-	document.querySelector("body > crowd-form").shadowRoot.querySelector("#footerContainer > style").innerHTML=content;
+    document.querySelector("body > crowd-form").shadowRoot.querySelector("#footerContainer").setAttribute('style', 'height: 80px; background: transparent; border-top: 1px solid transparent;'); 
+    
+    document.querySelector("body > crowd-form").shadowRoot.querySelector("#crowd-form-content").setAttribute('style', 'height: calc(100% - 2.8rem); padding: 1.4rem 1.4rem;');
+
+    document.querySelector('body > crowd-form').shadowRoot.querySelector('button[type="submit"]').setAttribute('style', 'background: #0073bb; border: 1px solid #0073bb;');
+
+    document.querySelector('body > crowd-form').shadowRoot.querySelector('button.awsui-button').click();
 }
 
 function removeExtraSpace(){
