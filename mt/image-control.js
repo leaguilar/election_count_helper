@@ -2,27 +2,15 @@ var firstWatch = true;
 
 document.onreadystatechange = () => {
     if (document.readyState === 'complete') {
-        /*document.getElementById('image').setAttribute('style', `max-height: ${document.documentElement.clientHeight - 210}px;`);*/
-		
-		/*document.getElementById('image').setAttribute('style', `max-height: calc(100vh - 50px);`);*/
         imageZoom('image', 'myresult');
-		
     }
 };
 
-window.addEventListener("resize", () => {
-    /*document.getElementById('image').setAttribute('style', `max-height: ${document.documentElement.clientHeight - 210}px;`);*/
-		
-	/*document.getElementById('image').setAttribute('style', `max-height: calc(100vh - 50px);`);*/
-	/*removeFooter()*/
-	/*removeFooter();*/
-	/*removeExtraSpace();*/
-	/*document.querySelector("body > crowd-form").shadowRoot.querySelector("#actionsContainer > awsui-button > button").addEventListener("click", askCheck);*/
-});
-
 window.addEventListener("focusin", () => {
-	removeFooter();
-	removeExtraSpace();
+    setTimeout(()=>{
+        removeFooter();
+        removeExtraSpace();
+    }, 3000);
 	document.querySelector("body > crowd-form").shadowRoot.querySelector("#actionsContainer > awsui-button > button").addEventListener("click", askCheck);
 });
 
@@ -34,9 +22,9 @@ function removeFooter(){
 }
 
 function removeExtraSpace(){
-	var all_inputs=document.querySelectorAll("crowd-input")
+	var all_inputs = document.querySelectorAll("crowd-input");
 	for (var i = 0; i < all_inputs.length; i++) { 
-		all_inputs[i].shadowRoot.querySelector("#container").shadowRoot.querySelector("div.floated-label-placeholder").hidden=true
+		all_inputs[i].shadowRoot.querySelector("#container").shadowRoot.querySelector("div.floated-label-placeholder").setAttribute('style', 'height: 10px');
 	}	
 }
 

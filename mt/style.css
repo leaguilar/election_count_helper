@@ -135,7 +135,8 @@
 }
 
 .form-container .image-container .inner-image-container img{
-    width: 400px !important;
+    width: auto;
+    max-width: 400px;
 	max-height: calc(100vh - 50px);
 }
 
@@ -155,7 +156,7 @@
     top: 0;
     bottom: 0;
     color: white;
-    background: rgba(0, 0, 0, 0.85);
+    background: rgba(0, 0, 0, 0.75);
     opacity: 0;
     display: flex;
     justify-content: center;
